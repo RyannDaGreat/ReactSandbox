@@ -5,9 +5,9 @@ const defaultTitle   ='Untitled'
 const defaultOnClick =()=>alert("defaultOnClick Test")
 export default function({title=defaultTitle, imageURL=defaultImageURL, onClick=defaultOnClick})
 {
-	console.assert(title   !==undefined && Object.getPrototypeOf(title   )===String  .prototype)
-	console.assert(imageURL!==undefined && Object.getPrototypeOf(imageURL)===String  .prototype)
-	console.assert(onClick !==undefined && Object.getPrototypeOf(imageURL)===Function.prototype)
+	console.assert(title!==undefined && Object.getPrototypeOf(title)===String.prototype)
+	console.assert(imageURL!==undefined && Object.getPrototypeOf(imageURL)===String.prototype)
+	console.assert(onClick!==undefined && Object.getPrototypeOf(onClick)===Function.prototype)
 	return <Card style={{width: '18rem', cursor: 'pointer'}} onClick={onClick}>
 		<Card.Img variant="top" src={imageURL}/>
 		<Card.Footer style={{'textAlign': 'center'}}>{title}</Card.Footer>

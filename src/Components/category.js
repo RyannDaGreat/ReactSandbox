@@ -5,17 +5,17 @@ import {useState} from 'react'
 import {Card, Collapse, Modal} from 'react-bootstrap'
 import Thumbnail from './thumbnail'
 import Button from 'react-bootstrap/Button'
-export default function({thumbnails, editable, title})
+export default function({thumbnails, editable, title, setTitle, remove})
 {
 	const categoryFontSize='30px'
 	const [notCollapsed,setNotCollapsed]=useState(true)
 	const [askIfDelete ,setAskIfDelete ]=useState(true)
 	console.assert(thumbnails!==undefined && Object.getPrototypeOf(thumbnails)===Array.prototype)
 	// console.assert(numberOfRows!==undefined && Object.getPrototypeOf(numberOfRows)===Number.prototype)
-	const deleteAsker=<div class='mx-auto' >
-			Are you sure you want to delete this category?
+	const removeAsker=<div class='mx-auto' >
+			Are you sure you want to remove this category?
 			<span>
-			<Button variant={'danger'}>Yes</Button>
+			<Button onClick={remove} variant={'danger'}>Yes</Button>
 			<Button onClick={()=>setAskIfDelete(false)}>No</Button>
 			</span>
 	</div>
@@ -65,9 +65,12 @@ export default function({thumbnails, editable, title})
 							 value={title} type={'text'} onSave={alert}/>
 				</div>
 			</div>
+		<Collapse in={askIfDelete}>
+			{removeAsker}
+		</Collapse>
 		</Card.Header>
 		<Collapse in={notCollapsed}>
-			{askIfDelete ? deleteAsker : cards}
+			{cards}
 		</Collapse>
 	</Card>
 }

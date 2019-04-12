@@ -1,4 +1,5 @@
 import Thumbnail from './Components/thumbnail'
+import Category from './Components/category'
 import React, {Component} from 'react'
 
 class App extends Component
@@ -13,7 +14,7 @@ class App extends Component
 				crossOrigin="anonymous"
 			/>
 			<div className="App">
-				<Thumbnail/>
+				<Category name="Category Name" style={{width:'100%'}}/>
 			</div>
 		</>
 	}

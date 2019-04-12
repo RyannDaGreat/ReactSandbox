@@ -1,6 +1,8 @@
 import Thumbnail from './Components/thumbnail'
 import Category from './Components/category'
 import React, {Component} from 'react'
+import Menubar from './Components/menubar';
+import UserInfo from './Components/userinfo';
 
 class App extends Component
 {
@@ -13,8 +15,13 @@ class App extends Component
 				integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 				crossOrigin="anonymous"
 			/>
+			<link
+				rel="stylesheet"
+				href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+				integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+				crossOrigin="anonymous"
+			/>
 			<div className="App">
-				<Category name="Category Name" style={{width:'100%'}}/>
 			</div>
 		</>
 	}

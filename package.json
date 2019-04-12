@@ -3,14 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "node-sass": "^4.11.0",
     "react": "^16.8.6",
+    "react-beautiful-dnd": "^11.0.0-beta.3",
     "react-bootstrap": "^1.0.0-beta.6",
     "react-color": "^2.17.0",
     "react-contextmenu": "^2.11.0",
     "react-dom": "^16.8.6",
     "react-dropdown": "^1.6.4",
+    "react-editext": "^3.1.1",
+    "react-ions": "^5.1.48",
     "react-scripts": "2.1.8",
     "react-sketch": "^0.5.1",
+    "styled-components": "^3.4.1",
     "three": "^0.103.0"
   },
   "scripts": {

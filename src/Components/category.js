@@ -1,5 +1,5 @@
 import EdiText from 'react-editext'
-import InlineEdit from 'react-ions/lib/InlineEdit'
+// import InlineEdit from 'react-ions/lib/InlineEdit'
 import React from 'react'
 import {useState} from 'react'
 import {Card, Collapse, Modal} from 'react-bootstrap'
